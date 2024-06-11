@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { BottomWarning } from "../components/BottomWarning"
 import { Button } from "../components/Button"
 import { Heading } from "../components/Heading"
 import { InputBox } from "../components/InputBox"
 import { SubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
+import { ButtonWarning } from "../components/ButtonWarning"
 
 export const Signup = () => {
     const [firstName, setFirstName] = useState("");
@@ -27,7 +27,7 @@ export const Signup = () => {
         }} placeholder="Doe" label={"Last Name"} />
         <InputBox onChange={e => {
           setUsername(e.target.value);
-        }} placeholder="harkirat@gmail.com" label={"Email"} />
+        }} placeholder="Vaibhav@gmail.com" label={"Email"} />
         <InputBox onChange={(e) => {
           setPassword(e.target.value)
         }} placeholder="123456" label={"Password"} />
@@ -43,7 +43,7 @@ export const Signup = () => {
             navigate("/dashboard")
           }} label={"Sign up"} />
         </div>
-        <BottomWarning label={"Already have an account?"} buttonText={"Sign in"} to={"/signin"} />
+        <ButtonWarning label={"Already have an account?"} buttonText={"Sing in"} to={"/signin"} />
       </div>
     </div>
   </div>
